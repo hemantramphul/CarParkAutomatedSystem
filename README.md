@@ -12,3 +12,13 @@ You will be provided with a small sample data file in the correct format to use 
 and testing your program. However, the program should work with any file of this format (and
 another file will be used when marking your work); therefore, your program should allow the user
 to specify the input file name as a command line argument.
+
+Parking prices will be calculated using the following table.
+
+Duration              Price
+less than 30 minutes  FREE
+Up to 1 hour          £1.50
+Up to 2 hours         £3.00
+Up to 4 hours         £5.00
+Up to 8 hours         £15.00
+Over 8 hours          £30.00
