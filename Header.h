@@ -179,7 +179,12 @@ void viewAll() {
 			record = split_c(line);
 
 			if (record.size() >= 1) {
-				cout << record[0] << "\t\t" << record[1];
+				if (record[0].length() <= 7) {
+					cout << record[0] << "\t\t\t" << record[1];
+				}
+				else {
+					cout << record[0] << "\t\t" << record[1];
+				}
 			}
 		}
 		cout << "\n";
@@ -205,7 +210,13 @@ void viewHistory() {
 			record = split_c(line);
 
 			if (record.size() >= 1) {
-				cout << record[0] << "\t\t"; //Number
+				if (record[0].length() <= 7) { //Number
+					cout << record[0] << "\t\t";
+				}
+				else {
+					cout << record[0] << "\t";
+				}
+
 				cout << record[1] << "\t"; //DateTimeEntry
 				cout << record[2] << "\t"; //DateTimeExit
 				cout << std::fixed << std::setprecision(2) << stod(record[3]); //Parking Hours
