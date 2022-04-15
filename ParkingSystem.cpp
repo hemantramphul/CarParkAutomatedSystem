@@ -2,10 +2,12 @@
 #include <fstream>
 #include <algorithm>
 #include <string>
-#include "Header.h"
+#include "ParkingSystemClass.h"
 using namespace std;
 
 void main() {
+	ParkingSystemClass obj; 
+
 	int user_input;
 
 	// Menu
@@ -28,23 +30,23 @@ void main() {
 		switch (user_input) {
 			case 1:
 				// Press 1: Entry of a vehicle
-				entryVehicle();
+				obj.entryVehicle();
 				break;
 			case 2:
 				// Press 2: Exit of a vehicle
-				exitVehicle();
+				obj.exitVehicle();
 				break;
 			case 3:
 				// Press 3: View all vehicles
-				viewAll();
+				obj.viewAll();
 				break;
 			case 4:
 				// Press 4: View history
-				viewHistory();
+				obj.viewHistory();
 				break;
 			case 5:
 				// Press 5: View parking prices
-				parking_prices();
+				obj.parking_prices();
 				break;
 		}
 	}
